@@ -1,43 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaac Mackenzie</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b4c4fba401.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
+
     <section id="landing-page">
         <nav>
-            <figure>
-                <img id="personal-logo" src="./assets/logo.jpg" alt="IM Logo" class="logo-class">
+
+            <figure class="spinning-prism" aria-label="Spinning logo prism">
+
+                <div class="prism">
+
+                    <div class="face back"><img src="assets/logo.jpg" alt="Isaac Mackenzie Logo"></div>
+                    <div class="face right"><img src="assets/logo.jpg" alt="Isaac Mackenzie Logo"></div>
+                    <div class="face left"><img src="assets/logo.jpg" alt="Isaac Mackenzie Logo"></div>
+                </div>
+                </div>
             </figure>
-        <ul class="nav__links--list">
-            <li class="nav__link">
-                <a href="#" class=
-                "nav__link--anchor
+
+            <ul class="nav__links--list">
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor
                 link__hover-effect
                 link__hover-effect--black
                 ">About</a>
-            </li>
-             <li class="nav__link">
-                <a href="#" class=
-                "nav__link--anchor
+                </li>
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor
                 link__hover-effect
                 link__hover-effect--black
                 ">Projects</a>
-            </li>
+                </li>
 
-                 <li class="nav__link">
-                <a href="# " class=
-                "nav__link--anchor
+                <li class="nav__link">
+                    <a href="# " class="nav__link--anchor
                 link__hover-effect
                 link__hover-effect--black
                 ">Contact</a>
+                </li>
+
+                <li class="nav__link click">
+                    <a href="# " class="nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+
+                "><i class="fa-solid fa-circle-half-stroke"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+
+                <h1 class="title">Hey</h1>
+                <h1 class="title orange">I'm Isaac</h1>
+            </div>
+            <p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for
+                building web applications,
+                Design, and Creation. For great user experiences.
+                <br>Here is a bit more<b class="orange"> about me</b>.
+            </p>
+            <div class="social__list">
+                <a href="https://www.linkedin.com/in/isaac-mackenzie-2a87a5125/" target="_blank"
+                    class="social__link click">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/ipmcknz33" target="_blank" class="social__link click">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="./assets/Isaac_Mackenzie_Resume.pdf" target="_blank" class="social__link click">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+
+            </div>
+        </header>
+        <button class="mail__btn click">
+            <a href="mailto:i.p.mcknz33@gmail.com" class="mail__btn--link">
+                <i class="fa-regular fa-envelope"></i></a>
+        </button>
+        <a href="projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+    </section>
+    <div class="section">
+        <h1 class="section__title">Here are some of my <span class="orange">Projects</span>.</span></h1>
+        <ul class="projects__list">
+            <li class="project">
+                <a href="projects/project1.html" class="project__link click">
+                    <img src="assets/project1.png" alt="Project 1 Screenshot" class="project__img">
+                    <h2 class="project__title">Project One</h2>
+                </a>
             </li>
-        </ul>
-    </nav>
- </section>
+            <li class="project__item">
+                <a href="projects/project2.html" class="project__link click">
+                    <img src="assets/project2.png" alt="Project 2 Screenshot" class="project__img">
+                    <h2 class="project__title">Project Two</h2>
+                </a>
+            </li>
+            <li class="project__item">
+                <div class="project__wrapper">
+
+                    <img src="assets/blinker mockup.png" alt="Project 1 Screenshot" class="project__img">
+                   <div class="projects__wrapper--bg"></div>
+                    <div class="project__description">
+                        <h3 class="project__description--title">Cars Sales Projects
+                        </h3>
+                        <h4 class="project__description--sub-title">HTML, CSS, JavaScript, Vue, Vuex.
+                        </h4>
+                        <p class="project__description--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Deserunt, non odio velit fuga ut deleniti minima temporibus aliquid repellat dignissimos
+                            provident nesciunt aliquam, odit veniam optio impedit quis esse quia.</p>
+                        <div class="project__description--links">
+                            <a href="#" class="project__description--link">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="project__description--link">
+                                <i class="fas fa-link"></i> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+         </ul>
+      </div>
+    </div>
 </body>
+
 </html>
