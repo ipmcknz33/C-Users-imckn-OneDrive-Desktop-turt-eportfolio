@@ -17,7 +17,6 @@
     p {
       line-height: 1.5;
       font-size: 16px;
-
     }
     
     a {
@@ -25,10 +24,11 @@
     }
 
     section {
-        background:rgb(245, 245, 245); ;
+        background:rgb(245, 245, 245); 
     }
+
     .title {
-    font-size: 76px;
+    font-size: 120px;
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
@@ -38,10 +38,10 @@
       color: #f06449;
     }
 
-    .container{
-     
+    .container {
       padding: 50px 0;
-    } 
+
+    }
 
     .row {
       width: 100%;
@@ -64,11 +64,13 @@
     button {
       cursor: pointer;
     }
+
     /*
     
     LANDING PAGE 
     
     */
+
 #landing-page {
  min-height: 100vh;
 }
@@ -85,9 +87,9 @@
 
 }
 .header__para {
-  font-size: 24;
+  font-size: 24px;
   line-height: 2;
-  min-width: 450px;
+  max-width: 450px;
 }
 
 .social__list {
@@ -130,14 +132,17 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 .scroll__icon {
-  width: 30px;
+  width: 20px;
   height: 30px;
   border: 2px solid #242424;
   border-radius: 24px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .scroll__icon::after {
   content: '';
   width: 4px;
@@ -270,8 +275,8 @@
     */
 
     .section__title {
-      font-size: 48px;
       text-align: center;
+      font-size: 48px;
       margin-bottom: 60px;
     }
 
@@ -280,20 +285,35 @@
       
     }
     .project__wrapper {
-
-      position: absolute;
+      position: relative;
       border-radius: 20px;
-      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
       overflow: hidden;
     }
 
+    .project__wrapper:hover .project__description {
+     opacity: 1;
+     transform: translateY(-50);
+    }
+
+    .project__wrapper:hover .project__img {
+      transform: scale(1.07);
+      filter: blur(5px);
+    }
+    
     .project__description {
       position: absolute;
       top: 50%;
       left: 90px;
       transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 300ms, transform 450ms ease;
       color: white;
       max-width: 550px;
+    }
+
+    .project__wrapper:hover .project__wrapper--bg {
+      opacity: 0.7;
     }
 
     .project__wrapper--bg {
@@ -304,4 +324,20 @@
       height: 100%;
       background-color: #1c1d25;
       opacity: 0.7;
+    }
+    .project__description--title {
+      font-size: 40px; 
+    }
+
+    .project__description--sub-title {
+      margin-top: 8px; 
+    }
+
+    .project__description--link {
+      color: white;
+      font-size: 20px;
+      margin-right: 16px;
+    }
+    .project__description--para {
+      margin: 16px 0;
     }
