@@ -221,20 +221,30 @@
         font-size: 16px;
         color: #242424;
         font-weight: 700;
+        display: inline-block;
+        position: relative;
+    }
+    .link__hover-effect-black::after {
+        opacity: 0.7;
     }
 
-    nav a {
-      color: #666;
-      text-decoration: none;
-      padding: 0px 10px;
-      margin: 0 20px;
-      transition: color 0.4s;
+    .link__hover-effect::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
     }
 
-    nav a:hover { 
-      color: grey;
-     }
+    .link__hover-effect:hover::after {
+    transform: scaleX(1);
+    }
 
+   
     .fa-adjust { 
       font-size: 20px; 
     }
