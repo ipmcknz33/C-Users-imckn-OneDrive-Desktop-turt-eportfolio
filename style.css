@@ -6,7 +6,6 @@
       display: grid;
       font-family: 'Roboto', sans-serif;
       overflow-x: hidden;   
-      padding-top: 10vh;
     }
 
     
@@ -198,36 +197,42 @@
     */
     
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        height: 100px;
-        padding: 0 20px;
-    }
-
-    .nav__links--list {
-      display: flex;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 20px;
     }
 
     .nav__link {
-        margin: 0 12px;
+    display: block; /* DO NOT use flex here */
     }
+
+    .nav__links--list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;  /* spacing between links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
 
     .nav__link--anchor {
-        font-size: 16px;
-        color: #242424;
-        font-weight: 700;
-        display: inline-block;
-        position: relative;
-    }
-    .link__hover-effect-black::after {
-        opacity: 0.7;
+    font-size: 16px;
+    color: #242424;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    flex:none;
     }
 
+   
     .link__hover-effect::after {
     content: "";
     position: absolute;
@@ -307,6 +312,85 @@
     .prism:hover {
       animation-duration: 15s;
     }
+
+     /*
+    
+    MODAL 
+    
+    */
+
+    .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 1100px;
+    height: 700px;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    } 
+
+    .modal__half {
+      width: 50%;
+      padding: 40px 72px;
+    }
+    .modal__about {
+      background-color: rgb(245, 245, 245);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .modal__languages {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .modal__language {
+      width: 25%;
+      padding: 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .modal__language:hover .languages__name {
+      transform: scale(1);
+    }
+
+    .languages__name {
+      position: absolute;
+      bottom: -10px;
+      transition:scale(0);
+      transform: all 300ms ease;
+    } 
+
+    .modal__languages--img {
+      width: 100%;
+    }
+
+    .modal__contact {
+      background-color: #242424;
+      color: white;
+    }
+
+    .modal__title {
+      font-style: 26px;
+    }
+
+    .modal__sub-title {
+      margin: 12px 0 24px 0;
+    }
+     .modal__para {
+      margin-bottom: 12px;
+      line-height: 1.75;
+     }
+
+
      /*
     
     PROJECTS 
