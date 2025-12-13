@@ -442,7 +442,7 @@
       margin-bottom: 20px;
      }
 
-     .form__submit {
+     .contact__submit {
       background-color: #f06449;
       border: 2px solid #f06449;
       color: #fff;
@@ -454,12 +454,12 @@
       transition: all 300ms ease;
      }
 
-     .form__submit:hover {
+     .contact__submit:hover {
       border-color: #fff;
       background-color: transparent;
      }
 
-     .form__submit:active {
+     .contact__submit:active {
       border-color: #f06449;
       color: #f06449;
      }
@@ -488,14 +488,18 @@
       font-weight: 700;
       text-align: center;
       padding: 28px;
+          z-index: -1;
      }
 
      .fa-spinner {
       animation: spinner 750ms infinite linear; 
      }
 
+     
+
      @keyframes spinner {
       0% {
+
         transform: rotate(0);
       }
 
