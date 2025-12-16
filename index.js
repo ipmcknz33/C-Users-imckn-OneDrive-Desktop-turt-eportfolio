@@ -1,12 +1,12 @@
 //template_xyczash
 //service_njecpim
 //0Mtkr8IFmq5-KtZG2
+const loading = document.querySelector('.modal__overlay--loading');
+const success = document.querySelector('.modal__overlay--success');
 
 
   function contact(event) {
     event.preventDefault();
-    const loading = document.querySelector('modal__overlay--loading');
-    const success = document.querySelector('modal__overlay--success');
     loading.classList.add("modal__overlay--visible");
 
 emailjs 
