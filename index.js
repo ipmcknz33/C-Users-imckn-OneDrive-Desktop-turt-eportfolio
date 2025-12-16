@@ -2,16 +2,7 @@
 //service_njecpim
 //0Mtkr8IFmq5-KtZG2
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "0Mtkr8IFmq5-KtZG2",
-      });
-   })();
-</script>
+
 
 function contact(event) {
     event.preventDefault();
