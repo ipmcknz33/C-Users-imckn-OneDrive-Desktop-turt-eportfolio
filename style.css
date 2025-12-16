@@ -493,10 +493,10 @@
        z-index: -1;
      }
 
-     .modal__overlay--visable {
+     .modal__overlay--visible {
       z-index: 1;
      }
-     
+
      .fa-spinner {
       animation: spinner 750ms infinite linear; 
      }
