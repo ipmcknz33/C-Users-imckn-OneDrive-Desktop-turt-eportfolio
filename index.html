@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/b4c4fba401.js" crossorigin="anonymous"></script>
-    <script type="text/javascript"
+<script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
@@ -17,6 +17,8 @@
         publicKey: "0Mtkr8IFmq5-KtZG2",
       });
    })();
+</script>
+
 </script>
 
 </head>
@@ -140,7 +142,7 @@
                 <h4 class="modal__sub-title modal__sub-title--contact">
                     I'm currently open to new opportunities. <br>I'm excited to hear from you!
                 </h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <lable class="form__item--label">Name</lable>
                         <input class="input" name="user_name" type="text"></input>
