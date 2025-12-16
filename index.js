@@ -5,9 +5,9 @@
 
   function contact(event) {
     event.preventDefault();
-    const loading = document.querySelector('.modal__overlay--loading');
-    const success = document.querySelector('.modal__overlay--success');
-    loading.classList.add(".modal__overlay--visible");
+    const loading = document.querySelector('modal__overlay--loading');
+    const success = document.querySelector('modal__overlay--success');
+    loading.classList.add("modal__overlay--visible");
 
 emailjs 
      .sendForm(
@@ -16,10 +16,10 @@ emailjs
         event.target,
         '0Mtkr8IFmq5-KtZG2'
    ).then(() => {
-     loading.classList.remove(".modal__overlay--visible");
-    success.classList.add(".modal__overlay--visable");
+     loading.classList.remove("modal__overlay--visible");
+    success.classList.add("modal__overlay--visable");
    }).catch(() =>{
-     loading.classList.remove(".modal__overlay--visible");
+     loading.classList.remove("modal__overlay--visible");
      alert(
         "The email service is temporarily unavailible. Please contact me directly on i.p.mcknz33@gmail.com"
      );
