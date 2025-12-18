@@ -842,6 +842,7 @@ SHAPES
   .section__title,
   .section__sub-title {
     margin: 100px;
+    font-size: 35px;
   }
 
   .header {
@@ -849,6 +850,7 @@ SHAPES
     flex-direction: column;
     position: relative;
     padding: 60px 100px ;
+    font-size: 15px;
   }
 
   .header__para {
