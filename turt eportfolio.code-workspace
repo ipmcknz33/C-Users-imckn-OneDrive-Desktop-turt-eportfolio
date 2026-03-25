@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../Tutorial Exclusive Eportfolio/assets"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "turt eportfolio",
+    "liveServer.settings.port": 5501
+  }
+}

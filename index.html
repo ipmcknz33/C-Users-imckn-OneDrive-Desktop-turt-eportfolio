@@ -2,363 +2,495 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Isaac Mackenzie</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/b4c4fba401.js" crossorigin="anonymous"></script>
-   
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-
-<script type="text/javascript">
-
-  function contact(event) {
-    event.preventDefault();
-    const loading = document.querySelector('modal__overlay--loading');
-    const success = document.querySelector('modal__overlay--success');
-    loading.classList.add("modal__overlay--visible");
-
-emailjs 
-     .sendForm(
-        'service_njecpim',
-        'template_xyczash',
-        event.target,
-        '0Mtkr8IFmq5-KtZG2'
-   ).then(() => {
-     loading.classList.remove("modal__overlay--visible");
-    success.classList.add("modal__overlay--visible");
-   }).catch(() =>{
-     loading.classList.remove("modal__overlay--visible");
-     alert(
-        "The email service is temporarily unavailible. Please contact me directly on i.p.mcknz33@gmail.com"
-     );
-   })
-}
-</script>
-
-
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body id="body" onmousemove="moveBackground(event)">
-
     <section id="landing-page">
         <nav>
-
             <figure class="spinning-prism" aria-label="Spinning logo prism">
-
                 <div class="prism">
-
-                    <div class="face back"><img src="assets/logo.jpg" alt="Isaac Mackenzie Logo"></div>
-                    <div class="face right"><img src="assets/logo.jpg" alt="Isaac Mackenzie Logo"></div>
-                    <div class="face left"><img src="assets/logo.jpg" alt="Isaac Mackenzie Logo"></div>
-                </div>
+                    <div class="face back">
+                        <img src="assets/logo.jpg" alt="Isaac Mackenzie Logo" />
+                    </div>
+                    <div class="face right">
+                        <img src="assets/logo.jpg" alt="Isaac Mackenzie Logo" />
+                    </div>
+                    <div class="face left">
+                        <img src="assets/logo.jpg" alt="Isaac Mackenzie Logo" />
+                    </div>
                 </div>
             </figure>
 
-            <ul class="nav__links--list" onclick="toggleModal()">
+            <ul class="nav__links--list">
                 <li class="nav__link">
-                    <a href="#" class="nav__link--anchor
-                link__hover-effect
-                link__hover-effect-black
-                ">About</a>
+                    <a href="#about" class="nav__link--anchor link__hover-effect link__hover-effect-black">
+                        About
+                    </a>
                 </li>
-
                 <li class="nav__link">
-                    <a href="#projects" class="nav__link--anchor
-                link__hover-effect
-                link__hover-effect-black
-                ">Projects</a>
+                    <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect-black">
+                        Projects
+                    </a>
                 </li>
-
-                <li class="nav__link" onclick="toggleModal()">
-                    <a href="# " class="nav__link--anchor
-                link__hover-effect
-                link__hover-effect-black
-                ">Contact</a>
+                <li class="nav__link">
+                    <a href="#" onclick="toggleModal(); return false;"
+                        class="nav__link--anchor link__hover-effect link__hover-effect-black">
+                        Contact
+                    </a>
                 </li>
-
                 <li class="nav__link click" onclick="toggleContrast()">
-                    <a href="# " class="nav__link--anchor
-                link__hover-effect
-                link__hover-effect-black
-                "><i class="fa-solid fa-circle-half-stroke"></i></a>
+                    <a href="#" onclick="return false;"
+                        class="nav__link--anchor link__hover-effect link__hover-effect-black">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
+
         <header class="header">
             <div class="header__content">
+                <p class="eyebrow">Frontend Developer</p>
                 <h1 class="title">Hey</h1>
                 <h1 class="title orange">I'm Isaac</h1>
-            </div>
-            <p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b>
-                with a strong passion for
-                building web applications,
-                Design, and Creation. For great user experiences.
-                <br>
-                Here is a bit more<b class="orange click" onclick="toggleModal()"> about me </b>.
-            </p>
-            <div class="social__list">
-                <a href="https://www.linkedin.com/in/isaac-mackenzie-2a87a5125/" target="_blank"
-                    class="social__link click">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/ipmcknz33" target="_blank" class="social__link click">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="./assets/Isaac_Mackenzie_Resume.pdf" target="_blank" class="social__link click">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
 
+                <p class="header__para">
+                    Frontend developer building clean, responsive, user-focused web applications with
+                    <b class="orange">JavaScript, TypeScript, React, Next.js, Firebase, Redux, REST APIs, responsive UI
+                        development, and modern frontend workflows</b>.
+                    I focus on polished UI, strong UX, API integration, and production-style builds.
+                </p>
+
+                <div class="hero__cta">
+                    <a href="assets/Isaac_Mackenzie_Frontend_Developer_Resume_v2.pdf" target="_blank"
+                        class="btn btn--primary">
+                        View Resume
+                    </a>
+
+                    <button class="btn btn--secondary" type="button" onclick="openRecruiterQuickView()">
+                        Recruiter Quick View
+                    </button>
+                </div>
+
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/isaac-mackenzie-dev" target="_blank" class="social__link click"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://github.com/ipmcknz33" target="_blank" class="social__link click"
+                        aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
             </div>
         </header>
-        <a href="#">
 
-            <button class="mail__btn click" onclick="toggleModal()">
-                <a href="mailto:i.p.mcknz33@gmail.com" class="mail__btn--link">
-                </a>
-                <i class="fa-solid fa-envelope"></i>
-            </button>
-        </a>
+        <button class="mail__btn click" type="button" onclick="toggleModal()" aria-label="Open contact modal">
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
-        <div class="modal">
+
+        <div class="modal" aria-hidden="true">
             <div class="modal__half modal__about">
-                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
-                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
-                <p class="modal__para">
-                    I'm a 46 year-old American <b class="orange">Frontend Software Engineer</b> with a passion for
-                    building clean, intuitive, and <b class="orange">impactful user
-                        experiences.</b>.
-                    </br>
-                    I specialize in modern web development and application UI design. I am <b class="orange">talented and
-                        experienced,</b> combining strong problem- solving abilities with a sharp eye for detail and
-                    usability. I thrive on transforming complex ideas into elegant resilient and scalable functional interfaces that users
-                    genuinely enjoy.
-                </p>
-                <div class="modal__languages">
-                    <figure class="modal__language">
-                        <img src="assets/HTML5_Badge.svg.png" class="modal__language--img">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img src="assets/css-131-722685.webp" class="modal__language--img">
-                        <span class="language__name">CSS</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img src="assets/javascript-1-225993.webp" class="modal__language--img">
-                        <span class="language__name">JavaScript</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img src="assets/react-3-1175109.webp" class="modal__language--img">
-                        <span class="language__name">React</span>
-                    </figure>
+                <div id="about-panel" class="modal__panel modal__panel--active">
+                    <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                    <h4 class="modal__sub-title modal__sub-title--about">Frontend Developer</h4>
+                    <p class="modal__para">
+                        I build clean, responsive, user-focused web applications with a strong emphasis on
+                        polished UI, real-world features, and frontend architecture that feels production-ready.
+                    </p>
+                    <p class="modal__para">
+                        My recent work includes authentication flows, API integration, dynamic routing, state
+                        management, responsive design, and high-fidelity interface builds.
+                    </p>
+
+                    <div class="modal__languages">
+                        <figure class="modal__language">
+                            <img src="assets/HTML5_Badge.svg.png" class="modal__language--img" alt="HTML" />
+                            <span class="language__name">HTML</span>
+                        </figure>
+
+                        <figure class="modal__language">
+                            <img src="assets/css-131-722685.webp" class="modal__language--img" alt="CSS" />
+                            <span class="language__name">CSS</span>
+                        </figure>
+
+                        <figure class="modal__language">
+                            <img src="assets/javascript-1-225993.webp" class="modal__language--img" alt="JavaScript" />
+                            <span class="language__name">JavaScript</span>
+                        </figure>
+
+                        <figure class="modal__language">
+                            <img src="assets/react-3-1175109.webp" class="modal__language--img" alt="React" />
+                            <span class="language__name">React</span>
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="recruiter-panel" class="modal__panel">
+                    <h3 class="modal__title modal__title--about">Recruiter Quick View</h3>
+                    <h4 class="modal__sub-title modal__sub-title--about">
+                        Internship, certificate, contact, and resume
+                    </h4>
+
+                    <div class="quickview">
+                        <div class="quickview__block">
+                            <div class="quickview__heading">Isaac Mackenzie</div>
+                            <p class="quickview__text">Frontend Developer</p>
+                            <p class="quickview__text">
+                                <a href="mailto:i.p.mcknz33@gmail.com">i.p.mcknz33@gmail.com</a>
+                            </p>
+                            <p class="quickview__text">
+                                <a href="tel:4803695423">480-369-5423</a>
+                            </p>
+
+                            <div class="modal__scroll-indicator">
+                                <div class="modal__scroll-icon"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="quickview__block">
+                            <div class="quickview__heading">Paid Internship</div>
+                            <ul class="quickview__list">
+                                <li>Frontend Developer Intern (Paid, 2 Weeks) — Frontend Simplified</li>
+                                <li>Built high-fidelity production-style frontend projects</li>
+                                <li>Worked with routing, auth flows, API integration, and polished responsive UI</li>
+                            </ul>
+                        </div>
+
+                        <div class="quickview__block">
+                            <div class="quickview__heading">Certificate</div>
+                            <ul class="quickview__list">
+                                <li>Frontend Simplified Graduation Certificate</li>
+                            </ul>
+                        </div>
+
+                        <div class="quickview__block">
+                            <div class="quickview__heading">Recent Skills</div>
+                            <ul class="quickview__list">
+                                <li>JavaScript, TypeScript, React, Next.js</li>
+                                <li>Firebase, Redux, REST APIs</li>
+                                <li>Responsive UI, authentication flows, dynamic routing, API integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="quickview__block">
+                            <div class="quickview__heading">Links</div>
+                            <div class="quickview__links">
+                                <a href="assets/Isaac_Mackenzie_Frontend_Developer_Resume_v2.pdf" target="_blank">
+                                    View Resume
+                                </a>
+                                <a href="assets/Isaac's Certificate.pdf" target="_blank">
+                                    View Certificate
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/isaac-mackenzie-dev" target="_blank">
+                                    LinkedIn
+                                </a>
+                                <a href="https://github.com/ipmcknz33" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="modal__half modal__contact">
                 <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
-                <h3 class="modal__title modal__title--contact">
-                    Let's have a chat!
-                </h3>
+
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">
-                    I'm currently open to new opportunities. <br>I'm excited to hear from you!
+                    I'm currently open to new opportunities. <br />
+                    I'm excited to hear from you!
                 </h4>
+
+                <p class="modal__para">
+                    Email:
+                    <a href="mailto:i.p.mcknz33@gmail.com" style="color: #f06449;">i.p.mcknz33@gmail.com</a>
+                    <br />
+                    Phone:
+                    <a href="tel:4803695423" style="color: #f06449;">480-369-5423</a>
+                </p>
+
                 <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
-                        <lable class="form__item--label">Name</lable>
-                        <input class="input" name="user_name" type="text"></input>
+                        <label class="form__item--label" for="user_name">Name</label>
+                        <input id="user_name" class="input" name="user_name" type="text" required />
                     </div>
+
                     <div class="form__item">
-                        <lable class="form__item--label">Email</lable></input>
-                        <input class="input" name="user_email" type="email" required>
+                        <label class="form__item--label" for="user_email">Email</label>
+                        <input id="user_email" class="input" name="user_email" type="email" required />
                     </div>
+
                     <div class="form__item">
-                        <lable class="form__item--label">Message</lable>
-                        <textarea class="input" name="message" type="text" required></textarea>
+                        <label class="form__item--label" for="message">Message</label>
+                        <textarea id="message" class="input" name="message" required></textarea>
                     </div>
-                    <button id="contact__submit" type="submit">
-                        Send it my way
-                    </button>
+
+                    <button id="contact__submit" type="submit">Send it my way</button>
                 </form>
+
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fas fa-spinner"></i>
-                </div>  
-                  <div class="modal__overlay modal__overlay--success">
-                    Thank you for the message. Looking forward to be speaking with you soon.
-                  </div>
+                </div>
+
+                <div class="modal__overlay modal__overlay--success">
+                    Thank you for the message. Looking forward to speaking with you soon.
+                </div>
             </div>
-            
         </div>
-        </div>
-        <img src="assets/semi circle.svg" class="shape shape--0">
-        <img src="assets/circle.svg" class="shape shape--1">
-        <img src="assets/squiggly.svg" class="shape shape--2">
-        <img src="assets/circle.svg" class="shape shape--3">
-        <img src="assets/triangle.svg" class="shape shape--4">
-        <img src="assets/circle.svg" class="shape shape--5">
-        <img src="assets/squiggly.svg " class="shape shape--6">
-        <img src="assets/circle.svg" class="shape shape--7">
-        <img src="assets/semi circle.svg" class="shape shape--8">
+
+        <img src="assets/semi circle.svg" class="shape shape--0" alt="" />
+        <img src="assets/circle.svg" class="shape shape--1" alt="" />
+        <img src="assets/squiggly.svg" class="shape shape--2" alt="" />
+        <img src="assets/circle.svg" class="shape shape--3" alt="" />
+        <img src="assets/triangle.svg" class="shape shape--4" alt="" />
+        <img src="assets/circle.svg" class="shape shape--5" alt="" />
+        <img src="assets/squiggly.svg" class="shape shape--6" alt="" />
+        <img src="assets/circle.svg" class="shape shape--7" alt="" />
+        <img src="assets/semi circle.svg" class="shape shape--8" alt="" />
     </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="row summary__content">
+                <p class="summary__eyebrow">About</p>
+                <h2 class="section__title">Production-style <span class="orange">frontend work</span></h2>
+                <p class="summary__para">
+                    I build responsive, modern interfaces with strong UX, API integration, and clean
+                    component-driven structure. My recent work includes internship-level app builds,
+                    authentication flows, dynamic data handling, and polished UI systems.
+                </p>
+                <div class="summary__tags">
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Firebase</span>
+                    <span>Redux</span>
+                    <span>REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="container">
             <div class="row">
-                <h1 class="section__title">Here are some of my <span class="orange">Projects</span>.
-                </h1>
+                <h1 class="section__title">Here are some of my <span class="orange">Projects</span>.</h1>
+
                 <ul class="projects__list">
+
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="assets/skinstric-app.png" class="project__img" alt="Skinstric Internship Build" />
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Cars Sales Projects
-                                </h3>
-                                <h4 class="project__description--sub-title">HTML, CSS, JavaScript.
+                                <h3 class="project__description--title">Skinstric Internship Build</h3>
+                                <h4 class="project__description--sub-title">
+                                    Next.js, TypeScript, GSAP, API Integration
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Deserunt, non odio velit fuga ut deleniti minima temporibus aliquid repellat
-                                    dignissimos
-                                    provident nesciunt aliquam, odit veniam optio impedit quis esse quia.
+                                    Internship build focused on high-fidelity UI, camera + gallery flow,
+                                    and AI API integration with real-time results.
                                 </p>
+
                                 <div class="project__description--links">
-                                    <a href="#" class="project__description--link">
-                                        <i class="fa-brands fa-github"></i> GitHub
+                                    <!-- GitHub -->
+                                    <a href="https://github.com/ipmcknz33/Skinstric-clone" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description--link">
+
+                                    <!-- LIVE DEMO (ADD THIS) -->
+                                    <a href="https://skinstric-wandag.vercel.app/" target="_blank"
+                                        class="project__description--link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-      <section id="projects">
-        <div class="container">
-            <div class="row">
-                <h1 class="section__title"> <span class="orange">Project 2</span>
-                </h1>
-                <ul class="projects__list">
+
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="assets/summarist-app.png" class="project__img" alt="Summarist Clone" />
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Cars Sales Projects
-                                </h3>
-                                <h4 class="project__description--sub-title">HTML, CSS, JavaScript.
-                                </h4>
+                                <h3 class="project__description--title">Summarist Clone</h3>
+                                <h4 class="project__description--sub-title">Next.js, TypeScript, Redux, Firebase</h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Deserunt, non odio velit fuga ut deleniti minima temporibus aliquid repellat
-                                    dignissimos
-                                    provident nesciunt aliquam, odit veniam optio impedit quis esse quia.
+                                    Pixel-accurate frontend app with auth, protected routes, dynamic routing, audio
+                                    flow, and API-driven content.
                                 </p>
                                 <div class="project__description--links">
-                                    <a href="#" class="project__description--link">
-                                        <i class="fa-brands fa-github"></i> GitHub
+                                    <a href="https://github.com/ipmcknz33" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description--link">
+                                    <a href="https://summerarist-intern-build.vercel.app/" target="_blank"
+                                        class="project__description--link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-      <section id="projects">
-        <div class="container">
-            <div class="row">
-                <h1 class="section__title"><span class="orange">Project 3</span>
-                </h1>
-                <ul class="projects__list">
+
+
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="assets/Ultraverse NFT Marketplace.png.png" class="project__img"
+                                alt="Ultraverse NFT Marketplace" />
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Cars Sales Projects
-                                </h3>
-                                <h4 class="project__description--sub-title">HTML, CSS, JavaScript.
-                                </h4>
+                                <h3 class="project__description--title">Ultraverse NFT Marketplace</h3>
+                                <h4 class="project__description--sub-title">Frontend Development</h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Deserunt, non odio velit fuga ut deleniti minima temporibus aliquid repellat
-                                    dignissimos
-                                    provident nesciunt aliquam, odit veniam optio impedit quis esse quia.
+                                    NFT marketplace-style frontend with strong UI layout, clean sections,
+                                    and modern responsive design patterns.
                                 </p>
+
                                 <div class="project__description--links">
-                                    <a href="#" class="project__description--link">
-                                        <i class="fa-brands fa-github"></i> GitHub
+                                    <!-- GitHub -->
+                                    <a href="https://github.com/ipmcknz33" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description--link">
+
+                                    <!-- LIVE DEMO (FIXED) -->
+                                    <a href="https://i-mackenzie-intership-1g61.vercel.app/" target="_blank"
+                                        class="project__description--link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </li>
+
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets/car-subscription-app.jpg" class="project__img"
+                                alt="Car Subscription App" />
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Car Subscription App</h3>
+                                <h4 class="project__description--sub-title">HTML, CSS, JavaScript</h4>
+                                <p class="project__description--para">
+                                    Responsive car subscription experience with strong visual layout and clean frontend
+                                    presentation.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://react-final-car-website.vercel.app/" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets/netflix-clone.jpg.png" class="project__img" alt="Netflix Clone" />
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Netflix Clone</h3>
+                                <h4 class="project__description--sub-title">React, JavaScript, Responsive UI</h4>
+                                <p class="project__description--para">
+                                    Streaming-style responsive interface built with reusable components and modern
+                                    frontend structure.
+                                </p>
+
+                                <div class="project__description--links">
+                                    <!-- GitHub -->
+                                    <a href="https://github.com/ipmcknz33" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                    <!-- LIVE DEMO (FIXED) -->
+                                    <a href="https://netflix-clone-ruby-eta-31.vercel.app/" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets/ink-plan.jpg.png" class="project__img" alt="InkPlan In Progress" />
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">InkPlan — In Progress</h3>
+                                <h4 class="project__description--sub-title">React, TypeScript, Express, API + Auth Work
+                                </h4>
+                                <p class="project__description--para">
+                                    SaaS product in progress focused on tattoo education, user progress, authentication,
+                                    and backend routes.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/ipmcknz33" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
                 </ul>
             </div>
         </div>
     </section>
+
     <footer>
         <div class="footer__row">
-
             <figure>
-                <img class="footer__logo--img" src="assets/vectorwhite.png" alt="Isaac Mackenzie Logo">
+                <img class="footer__logo--img" src="assets/vectorwhite.png" alt="Isaac Mackenzie Logo" />
             </figure>
 
             <div class="footer__social--list">
-                <a href="https://www.linkedin.com/in/isaac-mackenzie-2a87a5125/" target="_blank" class="
-         footer__social--link 
-         link__hover-effect  
-         link__hover-effect-white">
+                <a href="https://www.linkedin.com/in/isaac-mackenzie-dev" target="_blank"
+                    class="footer__social--link link__hover-effect link__hover-effect-white">
                     LinkedIn
                 </a>
 
-                <a href="https://github.com/ipmcknz33" target="_blank" class="
-         footer__social--link 
-         link__hover-effect 
-         link__hover-effect-white">
+                <a href="https://github.com/ipmcknz33" target="_blank"
+                    class="footer__social--link link__hover-effect link__hover-effect-white">
                     GitHub
                 </a>
 
-                <a href="#" onclick="toggleModal()" class="
-         footer__social--link 
-         link__hover-effect 
-         link__hover-effect-white">
+                <a href="#" onclick="toggleModal(); return false;"
+                    class="footer__social--link link__hover-effect link__hover-effect-white">
                     Contact
                 </a>
 
-                <a href="./assets/Isaac_Mackenzie_Resume.pdf" target="_blank" class="
-         footer__social--link 
-         link__hover-effect 
-         link__hover-effect-white">
+                <a href="assets/Isaac_Mackenzie_Frontend_Developer_Resume_v2.pdf" target="_blank"
+                    class="footer__social--link link__hover-effect link__hover-effect-white">
                     Resume
                 </a>
             </div>
 
             <div class="footer__copyright">
-                &copy; 2025 Isaac Mackenzie. All rights reserved.
+                &copy; 2026 Isaac Mackenzie. All rights reserved.
             </div>
-
         </div>
     </footer>
-
 </body>
 
 </html>
